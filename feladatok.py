@@ -53,4 +53,55 @@ def feladat5(szam):
 
     print(f" A {szam} legnagyobb egész osztója: {max}")
 
+def feladat6(szam):
+    i:int=2
+    while (i<szam):
+        if (szam%i==0):
+            print("Ez a szám nem prímszám")
+            break
+        i=i+1
+    if (i==szam):
+        print(f"Ez a szám primszám: {szam}")
+
+def feladat6b(szam):
+    i:int=2
+    prim=True
+    while (i<szam):
+        if (szam%i==0):
+            prim=False
+            break
+        i=i+1
+
+    if (prim==True):
+        print(f"Ez a szám prím: {szam}")
+    else:
+        print(f" Ez a szám nem prímszám {szam}")
+
+def feladat7_8(kezd,veg):
+    db:int=0
+    if (kezd<=0):
+        db=db+1
+        kezd=1
+    while(kezd<=veg):
+        #negyzetszam: szam a gyokevel osztva 0 maradekot ad
+        if (kezd%math.sqrt(kezd)==0):
+            db=db+1
+        kezd=kezd+1
+    print(f"Ennyi négyzetszám van {db}")
+
+def feladat9(kezd,veg):
+    osszeg:int=0
+    if (kezd<=0):
+        kezd=1
+    while (kezd<=veg):
+        if (kezd%math.sqrt(kezd)==0):
+            osszeg=osszeg+kezd
+        kezd=kezd+1
+    print(f"Ennyi a négyzetszámok összege: {osszeg}")
+
+
+
+
+
+
 
